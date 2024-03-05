@@ -28,4 +28,4 @@ _________
 
 ### Part II |  Basics of git
 
-## What is git?
+# What is git?
