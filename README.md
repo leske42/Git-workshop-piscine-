@@ -51,6 +51,8 @@ Deleting previously added files from the repo and then using `git add` will NOT 
 `git rm` for this. So if, for example, you have previously did: `git add *`, then `rm a.out`, you have to `git rm a.out` too, otherwise
 it will still be part of the commit.
 
+Try the following: go to one of your git repositories. Do `touch abc`, `git add abc`, `rm abc` and then check what `git status` tells you.
+
 #### Git commit
 Using `git commit` means: you ask git to make a snapshot of your project in its current state. This is a very useful
 feature, since some changes you make to the code can potentially mess up your project - and then you can see where it went wrong, and even return to an old commit. You can use `git log`
@@ -65,9 +67,16 @@ Date: Random Date<br>
 abcd second commit idk
 
 (yes i used to commit like this until like 1/4 of common core)<br>
-(*it is actually fun to read back old commit messages if you have the time*)
+*it is actually fun to read back old commit messages if you have the time*
 
 Try the following: go to one of your projects where you committed a lot. Commit all of your recent changes (if any). Use `git log` to view your previous commits.
 Select one and copy the *commit hash* from the top. Use `git checkout <commit hash>` and see what changed. Use `git checkout master` (or whatever branch you were on) to return.
 
 #### Remote repositories
+Remote repositories are like this one - they are not stored locally on your computer. You can connect a local repository (that you have on your computer) with a remote one.
+When you `git clone` from intra, this is exactly what happens. You create a local repository, which is already linked with a remote repository. Whenever you `git push`, you are
+moving your data from local repo to the connected remote one. Anything that is NOT committed will NOT be pushed. That's why it can happen that you have your C04 project on your computer, but
+when, during evaluation, you clone it from the intra, the repository appears to be empty.
+
+If you create a new repository with `git init`, it will initially not have any remote repository connected to it. You can still do commits, but `git push` in this context makes no sense.
+This is dangerous, as randominette can arrive at any time.
