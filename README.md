@@ -20,9 +20,9 @@ If you want to take your projects home after Piscine:
 
 There is also a way to link the remote repository you created now with your local repos that are already linked to your 42 remote repos.
 Like this you can select where to push. This process is a little bit more complicated but you can follow [this](https://github.com/francisrafal/42-connect-multiple-remotes-tutorial)
-guide by one of the 42 students:
+guide by one of the 42 students.
 
-(I never did this though but I'm also still not using VSCode change is scary)
+(*I never did this though but I'm also still not using VSCode change is scary*)
 
 _________
 
