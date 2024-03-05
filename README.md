@@ -78,5 +78,15 @@ When you `git clone` from intra, this is exactly what happens. You create a loca
 moving your data from local repo to the connected remote one. Anything that is NOT committed will NOT be pushed. That's why it can happen that you have your C04 project on your computer, but
 when, during evaluation, you clone it from the intra, the repository appears to be empty.
 
-If you create a new repository with `git init`, it will initially not have any remote repository connected to it. You can still do commits, but `git push` in this context makes no sense.
-This is dangerous, as randominette can arrive at any time.
+If you create a new repository with `git init`, it will initially not have any remote repository connected to it. You can still do commits, but pushing in this context makes no sense.
+This is dangerous, as *randominette* can arrive at any time.
+
+Try the following: create a repository on your GitHub account, then create a repository on your computer using `git init`. Go inside this repository, add & commit something, then try to `git push`. Carefully read what git tells you,
+and then follow it. Copy local->SSH (under Code button) from your GitHub repository. Do: `git remote add <name of your choice> <paste what you copied here>`. *Name of your choice* can be anything, but *origin* is often
+used in this context. Now do `git push origin` (or any name you chose). Again, read carefully what git tells you, and follow it. Do: `git push --set-upstream origin master` and see what happens.
+
+*You have now set the remote repository that you have named **origin** (or anything else) as the **upstream** for your local **master** branch. Whenever you push from master, you will push to (the corresponding branch on) origin.*
+
+This will of course not work if you have not added your **SSH key** before (during part I).
+
+#### How does this SSH thing work?
