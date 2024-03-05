@@ -28,4 +28,22 @@ _________
 
 ### Part II |  Basics of git
 
-# What is git?
+#### What is git?
+Git is a **version control system**. It is there to help you keep track of how your code changes over time as you work on it.
+It also makes collaboration easier (through branching, merging etc).
+
+#### What is a git repository?
+Simply put it is a storage place to store one specific project you are working on.
+Every repository has the (hidden) directory named `.git`. This is used to store all the information about your repository, like the
+content of your previous commits.
+You can create a git repository by using the command: `git init`. For your 42 projects, your repositories are automatically created
+for you, so you can `git clone` them from the intra.
+
+#### Staging area
+Staging area is where you put everything you changed, before you commit it. You can add things to the staging area with the command
+`git add`. If you have changed (or added) something, but did not add it to the staging area, `git status` will list it below "untracked
+files". Anything that is NOT in the staging area at the time of a commit will NOT be committed.
+Deleting previously added files from the repo and then using `git add` will NOT delete them from the staging area. You have to use
+`git rm` for this. So if, for example, you have previously did: `git add *`, then `rm a.out`, you have to `git rm a.out` too, otherwise
+it will still be part of the commit.
+
