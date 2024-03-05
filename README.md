@@ -45,13 +45,13 @@ for you, so you can `git clone` them from the intra.
 
 #### Staging area | git add
 Staging area is where you put everything you changed, before you commit it. You can add things to the staging area with the command
-`git add`. If you have changed (or added) something, but did not add it to the staging area, `git status` will list it below "untracked
+`git add`. If you have changed (or created) something, but did not add it to the staging area, `git status` will list it below "untracked
 files". Anything that is NOT in the staging area at the time of a commit will NOT be committed.
-Deleting previously added files from the repo and then using `git add` will NOT delete them from the staging area. You have to use
+Deleting previously added files from the repo and then using `git add *` will NOT delete them from the staging area. You have to use
 `git rm` for this. So if, for example, you have previously did: `git add *`, then `rm a.out`, you have to `git rm a.out` too, otherwise
 it will still be part of the commit.
 
-Try the following: go to one of your git repositories. Do `touch abc`, `git add abc`, `rm abc` and then check what `git status` tells you.
+Try the following: go to one of your git repositories. Do `touch abc`, `git add abc`, `rm abc` and then check what `git status` tells you. Proceed as you see fit.
 
 #### Git commit
 Using `git commit` means: you ask git to make a snapshot of your project in its current state. This is a very useful
@@ -63,7 +63,7 @@ to track the changes you implemented. For example, a git log that looks like thi
 
 commit 6fde8c6fab3774390920f18bb20066725ee61cfa<br>
 Author: Random Person<br>
-Date: Random Date<br>
+Date: Tue Mar 5 22:46:48 2024 +0100<br>
 abcd second commit idk
 
 (yes i used to commit like this until like 1/4 of common core)<br>
