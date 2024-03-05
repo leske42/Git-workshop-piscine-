@@ -52,11 +52,22 @@ Deleting previously added files from the repo and then using `git add` will NOT 
 it will still be part of the commit.
 
 #### Git commit
-Using `git commit` means: you ask git to make a snapshot of your project (so all of your files) in their current state. This is a very useful
-feature, since some changes you can potentially mess up your project - and then you can simply return to an old commit. You can use `git log`
+Using `git commit` means: you ask git to make a snapshot of your project in its current state. This is a very useful
+feature, since some changes you make to the code can potentially mess up your project - and then you can see where it went wrong, and even return to an old commit. You can use `git log`
 to view your previous commits.
 
 *Each commit has to include a commit message. Commit messages are very important, as later, when you look back at your commits, you will use these
-to track the changes you implemented. For example, a git log that looks like this:*
+to track the changes you implemented. For example, a git log that looks like this does not tell you much about what is going on:*
+
+commit 6fde8c6fab3774390920f18bb20066725ee61cfa<br>
+Author: Random Person<br>
+Date: Random Date<br>
+abcd second commit idk
+
+(yes i used to commit like this until like 1/4 of common core)<br>
+(*it is actually fun to read back old commit messages if you have the time*)
+
+Try the following: go to one of your projects where you committed a lot. Commit all of your recent changes (if any). Use `git log` to view your previous commits.
+Select one and copy the *commit hash* from the top. Use `git checkout <commit hash>` and see what changed. Use `git checkout master` (or whatever branch you were on) to return.
 
 #### Remote repositories
