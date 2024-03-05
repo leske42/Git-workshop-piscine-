@@ -32,6 +32,10 @@ _________
 Git is a **version control system**. It is there to help you keep track of how your code changes over time as you work on it.
 It also makes collaboration easier (through branching, merging etc).
 
+*Git is very verbose. This means, most of the time when you do something, it will display a lot of text updating you about what exactly happened,
+and what other things you might want to do. These messages are often colorful (red, brown, green etc). This does not mean that they are
+error messages, so don't be scared if you see them, instead read them carefully.*
+
 #### What is a git repository?
 Simply put it is a storage place to store one specific project you are working on.
 Every repository has the (hidden) directory named `.git`. This is used to store all the information about your repository, like the
@@ -47,3 +51,12 @@ Deleting previously added files from the repo and then using `git add` will NOT 
 `git rm` for this. So if, for example, you have previously did: `git add *`, then `rm a.out`, you have to `git rm a.out` too, otherwise
 it will still be part of the commit.
 
+#### Git commit
+Using `git commit` means: you ask git to make a snapshot of your project (so all of your files) in their current state. This is a very useful
+feature, since some changes you can potentially mess up your project - and then you can simply return to an old commit. You can use `git log`
+to view your previous commits.
+
+*Each commit has to include a commit message. Commit messages are very important, as later, when you look back at your commits, you will use these
+to track the changes you implemented. For example, a git log that looks like this:*
+
+#### Remote repositories
