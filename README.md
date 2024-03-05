@@ -1,6 +1,6 @@
-# Git-workshop-piscine-
+# Piscine git workshop notes (2024 february)
 
-### Part I |  GitHub  |  Kamilla
+### Part I |  GitHub
 If you want to take your projects home after Piscine:
 - Create GitHub account
     - Go to Settings -> SSH and GPG keys
@@ -25,3 +25,7 @@ https://github.com/francisrafal/42-connect-multiple-remotes-tutorial
 (I never did this though but I'm also still not using VSCode change is scary)
 
 _________
+
+### Part II |  Basics of git
+
+## What is git?
