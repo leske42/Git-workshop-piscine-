@@ -19,8 +19,8 @@ If you want to take your projects home after Piscine:
     - You are done!!
 
 There is also a way to link the remote repository you created now with your local repos that are already linked to your 42 remote repos.
-Like this you can select where to push. This process is a little bit more complicated but you can follow this guide by one of the 42 students:
-https://github.com/francisrafal/42-connect-multiple-remotes-tutorial
+Like this you can select where to push. This process is a little bit more complicated but you can follow [this](https://github.com/francisrafal/42-connect-multiple-remotes-tutorial)
+guide by one of the 42 students:
 
 (I never did this though but I'm also still not using VSCode change is scary)
 
@@ -43,7 +43,7 @@ content of your previous commits.
 You can create a git repository by using the command: `git init`. For your 42 projects, your repositories are automatically created
 for you, so you can `git clone` them from the intra.
 
-#### Staging area
+#### Staging area | git add
 Staging area is where you put everything you changed, before you commit it. You can add things to the staging area with the command
 `git add`. If you have changed (or added) something, but did not add it to the staging area, `git status` will list it below "untracked
 files". Anything that is NOT in the staging area at the time of a commit will NOT be committed.
@@ -72,7 +72,7 @@ abcd second commit idk
 Try the following: go to one of your projects where you committed a lot. Commit all of your recent changes (if any). Use `git log` to view your previous commits.
 Select one and copy the *commit hash* from the top. Use `git checkout <commit hash>` and see what changed. Use `git checkout master` (or whatever branch you were on) to return.
 
-#### Remote repositories
+#### Remote repositories | git push
 Remote repositories are like this one - they are not stored locally on your computer. You can connect a local repository (that you have on your computer) with a remote one.
 When you `git clone` from intra, this is exactly what happens. You create a local repository, which is already linked with a remote repository. Whenever you `git push`, you are
 moving your data from local repo to the connected remote one. Anything that is NOT committed will NOT be pushed. That's why it can happen that you have your C04 project on your computer, but
@@ -85,8 +85,15 @@ Try the following: create a repository on your GitHub account, then create a rep
 and then follow it. Copy local->SSH (under Code button) from your GitHub repository. Do: `git remote add <name of your choice> <paste what you copied here>`. *Name of your choice* can be anything, but *origin* is often
 used in this context. Now do `git push origin` (or any name you chose). Again, read carefully what git tells you, and follow it. Do: `git push --set-upstream origin master` and see what happens.
 
-*You have now set the remote repository that you have named **origin** (or anything else) as the **upstream** for your local **master** branch. Whenever you push from master, you will push to (the corresponding branch on) origin.*
+*You have now set the remote repository that you have named **origin** (or anything else) as the **upstream** for your local **master** branch. This means that whenever you push from master,
+you will push to (the corresponding branch on) origin.*
 
-This will of course not work if you have not added your **SSH key** before (during part I).
+This will of course not work if you have not added your **SSH key** before (during part I). //*SSH stands for Secure Shell (you will learn to hate this sentence in Common Core). It's a protocol that serves for secure communication
+between 2 points. Every information trasmitted between these points is encrypted.*
 
-#### How does this SSH thing work?
+#### Branches
+At the beginning, your repository only has one branch (this is usually called master or main). If you create a new branch, that means as long as you are on this branch, your commits will be stored separately from main (and
+from other branches), until you merge one with the other. This feature is especially useful for more people working together (and so each people can work on their own branch), or working on different features of the
+same project.
+
+Branching is a deep topic and not part of this workshop. But you can check out [this](https://github.com/LaDeMonika/42_Git_GitHub_Workshop) repository from a previous workshop on branching.
