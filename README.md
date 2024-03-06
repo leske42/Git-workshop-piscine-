@@ -1,6 +1,9 @@
 # Piscine git workshop notes (2024 february)
 
 ### Part I |  GitHub
+
+There are many platforms which provide Git hosting services, for example: GitHub, Gitea, GitLab, Bitbucket, Codeberg, Forgejo and many more. For simplicity we will use GitHub now, but in essence the process is pretty similar on all other platforms.
+
 If you want to take your projects home after Piscine:
 - Create GitHub account
     - Go to Settings -> SSH and GPG keys
