@@ -1,4 +1,4 @@
-# Piscine git workshop notes (2024 ~~february~~ june)
+# Piscine git workshop notes
 
 ### Part I |  GitHub
 
@@ -25,9 +25,6 @@ There is also a way to link the remote repository you created now with your loca
 Like this you can select where to push. This process is a little bit more complicated but you can follow [this](https://github.com/francisrafal/42-connect-multiple-remotes-tutorial)
 guide by one of the 42 students.
 
-~~(*I never did this though but I'm also still not using VSCode change is scary*)~~
-Good news: I have started using VSCode since february
-
 _________
 
 ### Part II |  Basics of git
@@ -52,7 +49,7 @@ Staging area is where you put everything you changed, before you commit it. You 
 `git add`. If you have changed (or created) something, but did not add it to the staging area, `git status` will list it below "untracked
 files". Anything that is NOT in the staging area at the time of a commit will NOT be committed.
 Deleting previously added files from the repo and then using `git add *` will NOT delete them from the staging area. You have to use
-`git rm` for this. So if, for example, you have previously did: `git add *`, then `rm a.out`, you have to `git rm a.out` too, otherwise
+`git rm` (or `git add -A`) for this. So if, for example, you have previously did: `git add -A`, then `rm a.out`, you have to `git rm a.out` too, otherwise
 it will still be part of the commit.
 
 Try the following: go to one of your git repositories. Do `touch abc`, `git add abc`, `rm abc` and then check what `git status` tells you. Proceed as you see fit.
@@ -74,7 +71,7 @@ abcd second commit idk
 *it is actually fun to read back old commit messages if you have the time*
 
 Try the following: go to one of your projects where you committed a lot. Commit all of your recent changes (if any). Use `git log` to view your previous commits.
-Select one and copy the *commit hash* from the top. Use `git checkout <commit hash>` and see what changed. Use `git checkout master` (or whatever branch you were on) to return.
+Select one and copy the *commit hash* from the top. Use `git checkout <commit hash>` and see what changed. Use `git checkout -` to return.
 
 #### Remote repositories | git push
 Remote repositories are like this one - they are not stored locally on your computer. You can connect a local repository (that you have on your computer) with a remote one.
